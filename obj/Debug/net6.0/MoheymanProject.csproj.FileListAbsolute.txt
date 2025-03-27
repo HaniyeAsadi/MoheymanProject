@@ -1,0 +1,15 @@
+c:\git\MoheymanProject\bin\Debug\net6.0\MoheymanProject.exe
+c:\git\MoheymanProject\bin\Debug\net6.0\MoheymanProject.deps.json
+c:\git\MoheymanProject\bin\Debug\net6.0\MoheymanProject.runtimeconfig.json
+c:\git\MoheymanProject\bin\Debug\net6.0\MoheymanProject.dll
+c:\git\MoheymanProject\bin\Debug\net6.0\ref\MoheymanProject.dll
+c:\git\MoheymanProject\bin\Debug\net6.0\MoheymanProject.pdb
+c:\git\MoheymanProject\obj\Debug\net6.0\MoheymanProject.csproj.AssemblyReference.cache
+c:\git\MoheymanProject\obj\Debug\net6.0\MoheymanProject.GeneratedMSBuildEditorConfig.editorconfig
+c:\git\MoheymanProject\obj\Debug\net6.0\MoheymanProject.AssemblyInfoInputs.cache
+c:\git\MoheymanProject\obj\Debug\net6.0\MoheymanProject.AssemblyInfo.cs
+c:\git\MoheymanProject\obj\Debug\net6.0\MoheymanProject.csproj.CoreCompileInputs.cache
+c:\git\MoheymanProject\obj\Debug\net6.0\MoheymanProject.dll
+c:\git\MoheymanProject\obj\Debug\net6.0\ref\MoheymanProject.dll
+c:\git\MoheymanProject\obj\Debug\net6.0\MoheymanProject.pdb
+c:\git\MoheymanProject\obj\Debug\net6.0\MoheymanProject.genruntimeconfig.cache
