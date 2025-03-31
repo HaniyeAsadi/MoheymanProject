@@ -60,10 +60,18 @@
                 break;
 
             case "changepassword":
-                if(args.Length == 5)
+                if (args.Length == 5)
                     userService.ChangePassword(args[2], args[4]);
                 else
                     Console.WriteLine("Invalid change password command.");
+
+                break;
+
+            case "search":
+                if(args.Length == 3)
+                    userService.Search(args[2]);
+                else
+                    Console.WriteLine("Invalid search command.");
 
                 break;
 

@@ -2,7 +2,7 @@ namespace MoheymanProject.Services;
 public class UserService
 {
     private readonly AppDbContext _db;
-    private User? _loggedInUser = null;
+    private User _loggedInUser = null;
     public UserService(AppDbContext db)
     {
         _db = db;
@@ -73,5 +73,15 @@ public class UserService
         _loggedInUser.Password = newPassword;
         _db.SaveChanges();
         Console.WriteLine("Password changed successfully!");
+    }
+    public void Search(string username)
+    {
+        var users = _db.Users.Where(u => u.Username.Contains(username)).ToList();
+        
+        int index = 0;
+        foreach (var user in users)
+        {
+            Console.WriteLine($"{index++}- {user.Username} | status: {(user.Status ? "available" : "not available")}");
+        }
     }
 }
