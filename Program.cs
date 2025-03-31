@@ -1,10 +1,4 @@
-﻿using System;
-using Microsoft.Data.SqlClient;
-using System.ComponentModel.DataAnnotations;
-using Microsoft.EntityFrameworkCore;
-using MoheymanProject.Data;
-using MoheymanProject.Services;
-public class Program
+﻿public class Program
 {
     public static void Main()
     {
