@@ -38,8 +38,27 @@ public class Program
                     userService.Register(args[2], args[4]);
                 else
                     Console.WriteLine("Invalid register command.");
+
                 break;
-            
+
+            case "login":
+                if (args.Length == 5)
+                    userService.Login(args[2], args[4]);
+                else
+                    Console.WriteLine("Invalid login command.");
+
+                break;
+
+            case "change":
+                if(args.Length == 3)
+                    userService.ChangeStatus(args[2]);
+                else if(args.Length == 4)
+                    userService.ChangeStatus(args[2] + ' ' + args[3]);
+                else
+                    Console.WriteLine("Invalid change status command.");
+                
+                break;
+                
             default:
                 Console.WriteLine("Unknown command.");
                 break;
