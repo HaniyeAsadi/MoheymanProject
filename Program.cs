@@ -50,15 +50,29 @@ public class Program
                 break;
 
             case "change":
-                if(args.Length == 3)
+                if (args.Length == 3)
                     userService.ChangeStatus(args[2]);
-                else if(args.Length == 4)
+                else if (args.Length == 4)
                     userService.ChangeStatus(args[2] + ' ' + args[3]);
                 else
                     Console.WriteLine("Invalid change status command.");
-                
+
                 break;
-                
+
+            case "logout":
+                if (args.Length == 1)
+                    userService.Logout();
+
+                break;
+
+            case "changepassword":
+                if(args.Length == 5)
+                    userService.ChangePassword(args[2], args[4]);
+                else
+                    Console.WriteLine("Invalid change password command.");
+
+                break;
+
             default:
                 Console.WriteLine("Unknown command.");
                 break;

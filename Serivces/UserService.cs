@@ -7,8 +7,8 @@ namespace MoheymanProject.Services
 {
     public class UserService
     {
-        public readonly AppDbContext _db;
-        public User? _loggedInUser = null;
+        private readonly AppDbContext _db;
+        private User? _loggedInUser = null;
         public UserService(AppDbContext db)
         {
             _db = db;
@@ -36,7 +36,7 @@ namespace MoheymanProject.Services
             }
 
             _loggedInUser = user;
-            Console.WriteLine($"Logged in successfully! Welcome, {username}");
+            Console.WriteLine($"Logged in successfully! Welcome, {username}.");
         }
         public void ChangeStatus(string status)
         {
@@ -49,7 +49,36 @@ namespace MoheymanProject.Services
             _loggedInUser.Status = status == "available";
             _db.SaveChanges();
 
-            Console.WriteLine($"User {_loggedInUser.Username} status updated to {status}");
+            Console.WriteLine($"User {_loggedInUser.Username} status updated to {status}.");
+
+        }
+        public void Logout()
+        {
+            if (_loggedInUser == null)
+            {
+                Console.WriteLine("Access denied! Please log in first.");
+                return;
+            }
+
+            _loggedInUser = null;
+        }
+        public void ChangePassword(string oldPassword, string newPassword)
+        {
+            if (_loggedInUser == null)
+            {
+                Console.WriteLine("Access denied! Please log in first.");
+                return;
+            }
+
+            if (_loggedInUser.Password != oldPassword)
+            {
+                Console.WriteLine("Password change failed! Incorrect old password.");
+                return;
+            }
+
+            _loggedInUser.Password = newPassword;
+            _db.SaveChanges();
+            Console.WriteLine("Password changed successfully!");
         }
     }
 
