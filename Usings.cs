@@ -8,3 +8,6 @@ global using System.ComponentModel.DataAnnotations;
 global using MoheymanProject.Data;
 global using MoheymanProject.Services;
 global using MoheymanProject.Models;
+global using System.Reflection;
+global using System.Runtime.InteropServices;
+global using MoheymanProject.Utilities;
