@@ -1,12 +1,12 @@
 namespace MoheymanProject.Utilities;
 public class CommandExecuter
 {
-    private const string username = "--username";
-    private const string password = "--password";
-    private const string status = "--status";
-    private const string old = "--old";
-    private const string new_password = "--new";
-    private const string available = "available";
+    private const string USERNAME = "--username";
+    private const string PASSWORD = "--password";
+    private const string STATUS = "--status";
+    private const string OLD = "--old";
+    private const string NEW_PASSWORD = "--new";
+    private const string AVAILABLE = "available";
     private const string NOT_AVAILABLE = "not available";
     private UserService _userService;
     private UserService UserService
@@ -32,7 +32,7 @@ public class CommandExecuter
 
     private void ExecuteSearchCommand(string[] args)
     {
-        if (args.Length == 3 && args[1] == username)
+        if (args.Length == 3 && args[1] == USERNAME)
             UserService.Search(args[2]);
         else
             Console.WriteLine("Invalid search command.");
@@ -46,7 +46,7 @@ public class CommandExecuter
 
     private void ExecuteChangePasswordCommand(string[] args)
     {
-        if (args.Length == 5 && args[1] == old && args[3] == new_password)
+        if (args.Length == 5 && args[1] == OLD && args[3] == NEW_PASSWORD)
             UserService.ChangePassword(args[2], args[4]);
         else
             Console.WriteLine("Invalid change password command.");
@@ -54,9 +54,9 @@ public class CommandExecuter
 
     private void ExecuteChangeCommand(string[] args)
     {
-        if (args.Length == 3 && args[1] == status && args[2] == available)
+        if (args.Length == 3 && args[1] == STATUS && args[2] == AVAILABLE)
             UserService.Change(args[2]);
-        else if (args.Length == 4 && args[1] == status && args[2] + ' ' + args[3] == NOT_AVAILABLE)
+        else if (args.Length == 4 && args[1] == STATUS && args[2] + ' ' + args[3] == NOT_AVAILABLE)
             UserService.Change(args[2] + ' ' + args[3]);
         else
             Console.WriteLine("Invalid change status command.");
@@ -64,7 +64,7 @@ public class CommandExecuter
 
     private void ExecuteLoginCommand(string[] args)
     {
-        if (args.Length == 5 && args[1] == username && args[3] == password)
+        if (args.Length == 5 && args[1] == USERNAME && args[3] == PASSWORD)
             UserService.Login(args[2], args[4]);
         else
             Console.WriteLine("Invalid login command.");
@@ -72,7 +72,7 @@ public class CommandExecuter
 
     private void ExecuteRegisterCommand(string[] args)
     {
-        if (args.Length == 5 && args[1] == username && args[3] == password)
+        if (args.Length == 5 && args[1] == USERNAME && args[3] == PASSWORD)
             UserService.Register(args[2], args[4]);
         else
             Console.WriteLine("Invalid register command.");
