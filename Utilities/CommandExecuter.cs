@@ -54,9 +54,9 @@ public class CommandExecuter
 
     private void ExecuteChangeCommand(string[] args)
     {
-        if (args.Length == 3 && args[2] == status)
+        if (args.Length == 3 && args[1] == status && args[2] == available)
             UserService.Change(args[2]);
-        else if (args.Length == 4 && args[2] + ' ' + args[3] == NOT_AVAILABLE)
+        else if (args.Length == 4 && args[1] == status && args[2] + ' ' + args[3] == NOT_AVAILABLE)
             UserService.Change(args[2] + ' ' + args[3]);
         else
             Console.WriteLine("Invalid change status command.");

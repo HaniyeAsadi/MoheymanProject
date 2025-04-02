@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\MoheymanProject\\MoheymanProject.csproj": {}
+    "c:\\git\\MoheymanProject\\MoheymanProject.csproj": {}
   },
   "projects": {
-    "C:\\git\\MoheymanProject\\MoheymanProject.csproj": {
+    "c:\\git\\MoheymanProject\\MoheymanProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\MoheymanProject\\MoheymanProject.csproj",
+        "projectUniqueName": "c:\\git\\MoheymanProject\\MoheymanProject.csproj",
         "projectName": "MoheymanProject",
-        "projectPath": "C:\\git\\MoheymanProject\\MoheymanProject.csproj",
+        "projectPath": "c:\\git\\MoheymanProject\\MoheymanProject.csproj",
         "packagesPath": "C:\\Users\\AminPardaz\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\MoheymanProject\\obj\\",
+        "outputPath": "c:\\git\\MoheymanProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AminPardaz\\AppData\\Roaming\\NuGet\\NuGet.Config"

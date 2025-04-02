@@ -5,7 +5,7 @@ public class UserService
     private const string NOT_AVAILABLE = "not available";
 
     private AppDbContext _db;
-    private User LoggedInUser {get; set;}
+    private User LoggedInUser { get; set; }
     private AppDbContext DB
     {
         get
@@ -63,6 +63,7 @@ public class UserService
         }
 
         LoggedInUser = null;
+        Console.WriteLine("Logged out successfully!");
     }
     public void ChangePassword(string oldPassword, string newPassword)
     {
@@ -75,6 +76,12 @@ public class UserService
         if (LoggedInUser.Password != oldPassword)
         {
             Console.WriteLine("Password change failed! Incorrect old password.");
+            return;
+        }
+
+        if (string.IsNullOrEmpty(newPassword))
+        {
+            Console.WriteLine("New password cannot be empty.");
             return;
         }
 
