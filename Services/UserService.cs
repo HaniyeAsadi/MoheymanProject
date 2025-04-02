@@ -93,6 +93,12 @@ public class UserService
     {
         var users = DB.Users.Where(u => u.Username.Contains(username)).ToList();
 
+        if (users.Count == 0)
+        {
+            Console.WriteLine("No users match your search. Please try a different username.");
+            return;
+        }
+
         int index = 0;
         foreach (var user in users)
         {
