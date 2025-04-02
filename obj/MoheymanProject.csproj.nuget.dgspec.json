@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\MoheymanProject\\MoheymanProject.csproj": {}
+    "c:\\git\\MoheymanProject\\MoheymanProject.csproj": {}
   },
   "projects": {
-    "C:\\git\\MoheymanProject\\MoheymanProject.csproj": {
+    "c:\\git\\MoheymanProject\\MoheymanProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\MoheymanProject\\MoheymanProject.csproj",
+        "projectUniqueName": "c:\\git\\MoheymanProject\\MoheymanProject.csproj",
         "projectName": "MoheymanProject",
-        "projectPath": "C:\\git\\MoheymanProject\\MoheymanProject.csproj",
+        "projectPath": "c:\\git\\MoheymanProject\\MoheymanProject.csproj",
         "packagesPath": "C:\\Users\\AminPardaz\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\MoheymanProject\\obj\\",
+        "outputPath": "c:\\git\\MoheymanProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AminPardaz\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,26 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.17, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
